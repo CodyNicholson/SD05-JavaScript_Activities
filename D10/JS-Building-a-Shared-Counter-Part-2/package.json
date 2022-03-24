@@ -1,0 +1,17 @@
+{
+  "name": "5.7.2-activity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "inspect-ip": "node inspectIP"
+  },
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "cross-spawn": "^7.0.3",
+    "json-server": "^0.16.3",
+    "live-server": "^1.2.1"
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                    <meta charset="utf-8">
+                    <title>Stop Event Propagation Demo</title>
+                    <style type="text/css">
+                        div, p, a{
+                            padding: 15px 30px;
+                            display: block;
+                            border: 2px solid #000;
+                            background: #fff;
+                        }
+                    </style>
+                    </head>
+                    <body>
+					<h1>5.6.5 - Interactive Web Pages - Lesson Companion</h1>
+<h2>.stopPropagation()</h2>
+<br>
+<br>
+<p> Click 'Click Me' element below to view the concept of the stopPropagation() method. </p>
+                    <div id="wrap">DIV
+                        <p class="hint">P
+                            <a href="#">A</a>
+                        </p>
+                    </div>
+                    <div id="wrap">
+<p class="hint">
+<a href="#">Click Me</a>
+</p>
+
+</div>
+                    <script>
+                        function showAlert(event) {
+                            alert("You clicked: "+ this.tagName);
+                            event.stopPropagation();
+                        }
+                    
+                        var elems = document.querySelectorAll("div, p, a");
+                        for(let elem of elems) {
+                            elem.addEventListener("click", showAlert);
+                        }
+                    </script>
+                    </body>
+                    </html>

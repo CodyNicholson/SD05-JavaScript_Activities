@@ -1,0 +1,33 @@
+body {
+  margin: 20px auto;
+  font-family: 'Lato';
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+
+form, p {
+  margin: 20px;
+}
+
+p.note {
+  font-size: 1rem;
+  color: red;
+}
+
+
+
+input {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-left: 20px;
+  padding: 4px;
+  margin-bottom: 20px;
+  font-family: 'Lato';
+  width: 300px;
+  background-color: lightskyblue
+}
+
+label {
+  width: 250px;
+  display: inline-block;
+}

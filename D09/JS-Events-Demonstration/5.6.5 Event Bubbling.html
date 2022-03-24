@@ -1,0 +1,26 @@
+<html lang="en">
+                <head>
+                <meta charset="utf-8">
+                <title>JavaScript Event Bubbling Demo</title>
+                <style type="text/css">
+                    div, p, a{
+                        padding: 15px 30px;
+                        display: block;
+                        border: 2px solid #000;
+                        background: #fff;
+                    }
+                </style>
+                </head>
+                <body>
+				<h1>5.6.5 - Interactive Web Pages - Lesson Companion</h1>
+<h2>Event Bubbling Demo</h2>
+<br>
+<br>
+<p> Click each element below to view the concept of the event bubbling concept. </p>
+                <div onclick="alert('Bubbling: ' + this.tagName)">DIV
+                    <p onclick="alert('Bubbling: ' + this.tagName)">P
+                        <a href="#" onclick="alert('Bubbling: ' + this.tagName)">A</a>
+                    </p>
+                </div>
+                </body>
+                </html>

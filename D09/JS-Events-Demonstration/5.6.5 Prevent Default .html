@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Prevent Default Demo</title>
+</head>
+<body>
+<h1>5.6.5 - Interactive Web Pages - Lesson Companion</h1>
+<h2>preventDefault()</h2>
+<br>
+<br>
+<p> Please enter your name and click Submit to view the concept the preventDefault() method.</p>
+<form action="/examples/html/action.js" method="post" id="users">
+    <label>First Name:</label>
+    <input type="text" name="first-name" id="firstName">
+    <input type="submit" value="Submit" id="submitBtn">
+    <input type="checkbox" id="myCheck">
+</form>
+
+<script>
+    var btn = document.getElementById("submitBtn");
+    var chk = document.getElementById("myCheck");
+    
+    btn.addEventListener("click", function(event) {
+        var name = document.getElementById("firstName").value;
+        alert("Sorry, " + name + ". The preventDefault() won't let you submit this form!");
+        event.preventDefault(); // Prevent form submission
+    });
+
+    chk.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent form submission
+    });
+</script>
+</body>
+</html>

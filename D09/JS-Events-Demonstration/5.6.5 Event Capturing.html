@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Event Capturing Demo</title>
+<style type="text/css">
+    div, p, a{
+        padding: 15px 30px;
+        display: block;
+        border: 2px solid #000;
+        background: #fff;
+    }
+</style>
+</head>
+<body>
+
+<h1>5.6.5 - Interactive Web Pages - Lesson Companion</h1>
+<h2>Event Capturing</h2>
+<br>
+<br>
+<p> Click 'Click Me' below view the concept of event capturing </p>
+<div id="wrap">DIV
+    <p class="hint">P
+        <a href="#">A</a>
+    </p>
+</div>
+
+<div id="wrap">
+<p class="hint">
+<a href="#">Click Me</a>
+</p>
+
+</div>
+
+<script>
+    function showTagName() {
+        alert("Capturing: "+ this.tagName);
+    }
+    
+    var elems = document.querySelectorAll("div, p, a");
+    for(let elem of elems) {
+        elem.addEventListener("click", showTagName, true);
+    }
+</script>
+</body>
+</html>

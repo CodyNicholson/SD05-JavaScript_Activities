@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Activity 5.6.6 Regular Expressions Form Validation</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body> 
+    <h3>StackOver Employee Data Form </h3>   
+    <p class="note">Fields marked with * are required.</p>
+      <form>
+        <label for="name">Name: *</label>
+        <input type="text" id="name" name="name" pattern="[a-zA-Z]+" >
+        <br>
+
+        <label for="name">Phone Number: *</label>
+        <input type="text" id="phone" name="phone" maxlength="11" pattern="[/^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/]">
+        <br>
+
+        <label for="name">Social Security #: *</label>
+        <input type="text" id="social" name="social" pattern="" minlength="10"  maxlength="10" pattern="[^(?!666|000|9\\d{2})\\d{3}-(?!00)\\d{2}-(?!0{4})\\d{4}$]" >
+        <br>
+
+        <label for="name">Company Email Address: *</label>
+        <input type="email" id="email" name="email" pattern="[^[A-Z0-9+_.-]+@[A-Z0-9.-]+$]" >
+        <br>
+
+        <label for="name">Age: </label>
+        <input type="number" id="age" name="age" min="10" max="80">
+        <br>
+
+        <label for="name">ZipCode: * </label>
+        <input type="number" id="zip" name="zip" maxlength="9" pattern="[/^\d{5}(-\d{4})?(?!-)$/]" >
+        <br>
+        
+        <input type="submit" value="Submit" />
+      <input type="reset" value="Clear"/> 
+    </form>
+  </body>
+</html>
+
+
